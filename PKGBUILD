@@ -1,4 +1,4 @@
-# Maintainer: ivan a.k.a. ratijas <me@ratijas.tk>
+# Maintainer: ivan a.k.a. ratijas <me at ratijas dot tk>
 pkgname=symlink-latest-kernel
 pkgver=1.0
 pkgrel=1
