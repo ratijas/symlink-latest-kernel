@@ -1,8 +1,6 @@
 #!/bin/bash -e
 
-cd /usr/lib/modules
-
-rm -f latest
+rm -f /usr/lib/modules/latest
 
 readonly latest="$(
   cd /usr/lib/modules;
@@ -12,5 +10,5 @@ readonly latest="$(
 )"
 
 if [[ -n "$latest" ]]; then
-  ln -s "$latest" latest
+  ln -s "$latest" /usr/lib/modules/latest
 fi
