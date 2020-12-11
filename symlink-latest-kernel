@@ -1,0 +1,16 @@
+#!/bin/bash -e
+
+cd /usr/lib/modules
+
+rm -f latest
+
+readonly latest="$(
+  cd /usr/lib/modules;
+  find * -maxdepth 0 -type d |
+  sort --version-sort --reverse |
+  head --lines=1
+)"
+
+if [[ -n "$latest" ]]; then
+  ln -s "$latest" latest
+fi
